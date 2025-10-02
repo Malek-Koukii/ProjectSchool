@@ -1,0 +1,24 @@
+.main-heading {
+  text-align: center;
+  font-weight: 500;
+  font-size: 28px;
+  position: relative;
+  margin-bottom: 70px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $main-color-alt;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    width: 90px;
+    height: 3px;
+    background-image: linear-gradient(
+      to right,
+      $main-background-color 30%,
+      $main-color 30%,
+      $main-color 65%,
+      $color 60%
+    );
+  }
+}

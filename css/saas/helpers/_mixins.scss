@@ -1,0 +1,29 @@
+/** Prefixes Mixin **/
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+/* Mixin */
+@mixin hover-bg($color) {
+  &:hover {
+    background-color: $color;
+  }
+}
+
+@mixin border($width, $style, $color) {
+  border: $width $style $color;
+}
+
+@mixin hover-card($translate: -10px, $duration: $main-transition) {
+  &:hover {
+    transform: translateY($translate);
+  }
+}
+
+@mixin duration($duration: $main-transition) {
+  transition: $duration;
+}

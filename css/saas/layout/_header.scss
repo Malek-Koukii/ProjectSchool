@@ -1,0 +1,36 @@
+/* ----- # Start TopBar ----- # */
+.topBar {
+  background: $main-color;
+  i {
+    color: $color;
+  }
+}
+
+/* ----- # Start NavBar ----- # */
+.header {
+  box-shadow: 0 0 8px #ddd;
+  .navbar-brand {
+    color: $color;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Brush Script MT";
+  }
+  .navbar-nav {
+    color: $main-text-color;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .navbar-brand,
+  .nav-link {
+    &.active,
+    &:hover {
+      color: $color !important;
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+}

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project School</title>
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+  </head>
+  <body>
+    <div class="sticky-top">
+      <!-- ======= Start TopBar ======= -->
+      <nav class="navbar topBar p-0">
+        <div class="container">
+          <span class="navbar-text text-light">
+            <i class="fas fa-mobile"></i>
+            (+216) 50 000 000
+          </span>
+          <span class="navbar-text text-light">
+            <i class="fas fa-envelope"></i> carthageschool@gmail.com
+          </span>
+        </div>
+      </nav>
+
+      <!-- ======= Start Header ======= -->
+      <nav class="navbar header navbar-expand-md bg-white p-2">
+        <div class="container">
+          <a class="navbar-brand" href="#">Carthage School</a>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainmenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainmenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-section=".slider"
+                  aria-current="page"
+                  href="#"
+                  >Acceuil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-section=".presentation"
+                  href="#presentation"
+                  >L'école</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-section=".services" href="#services"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-section=".parcours" href="#parcours"
+                  >Parcours Scolaire</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-section=".activity" href="#activity"
+                  >Activités</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-section=".contact" href="#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- ======= Start Slider ======= -->
+    <div class="slider">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="imgs/landing-01.jpg"
+              class="d-block w-100"
+              alt="landing-01"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="imgs/landing-02.jpg"
+              class="d-block w-100"
+              alt="landing-02"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="imgs/landing-03.jpg"
+              class="d-block w-100"
+              alt="landing-03"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <div class="text">
+        <div class="content">
+          <h1>A l'Ecole Primaire Privée De Carthage On Dispose :</h1>
+          <p>Encadrement De Haut Niveau</p>
+          <p>Suivi Pédagogique Continu</p>
+          <p>Soutien Scolaire</p>
+        </div>
+        <button
+          class="inscription-btn d-flex"
+          data-bs-toggle="modal"
+          data-bs-target="#inscription"
+        >
+          Pré-inscription
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="inscription"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header first-header">
+            <div class="title mt-4 mb-3">
+              <h1>Pre-Inscription</h1>
+              <h2>Ecole De carthage</h2>
+            </div>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form id="form" action="/">
+              <div class="student">
+                <div class="modal-header">
+                  <h6 class="modal-title fw-bold" id="inscriptionLabel">
+                    Elève - Informations Générales
+                  </h6>
+                </div>
+                <label>Nom *</label>
+                <div class="inputIcon">
+                  <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    placeholder="Nom"
+                  />
+                  <i class="fa fa-user"></i>
+                  <div class="error"></div>
+                </div>
+
+                <label>Prénom *</label>
+                <div class="inputIcon">
+                  <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    placeholder="Prénom"
+                  />
+                  <i class="fa fa-user"></i>
+                  <div class="error"></div>
+                </div>
+
+                <label>Date de naissance *</label>
+                <div class="inputIcon">
+                  <input id="birthday" name="birthday" type="date" />
+                  <div class="error"></div>
+                </div>
+              </div>
+
+              <div class="parent">
+                <div class="modal-header">
+                  <h6 class="modal-title fw-bold" id="inscriptionLabel">
+                    Parent - Informations Générales
+                  </h6>
+                </div>
+
+                <label>Nom *</label>
+                <div class="inputIcon">
+                  <input
+                    id="lastNameParent"
+                    name="lastNameParent"
+                    type="text"
+                    placeholder="Nom"
+                  />
+                  <i class="fa fa-user"></i>
+                  <div class="error"></div>
+                </div>
+
+                <label>Prénom *</label>
+                <div class="inputIcon">
+                  <input
+                    id="firstNameParent"
+                    name="firstNameParent"
+                    type="text"
+                    placeholder="Prénom"
+                  />
+                  <i class="fa fa-user"></i>
+                  <div class="error"></div>
+                </div>
+
+                <label>Email *</label>
+                <div class="inputIcon">
+                  <input
+                    id="email"
+                    name="email"
+                    type="text"
+                    placeholder="Email"
+                  />
+                  <i class="fa fa-envelope"></i>
+                  <div class="error"></div>
+                </div>
+
+                <label>Téléphone *</label>
+                <div class="inputIcon">
+                  <input
+                    id="mobile"
+                    name="mobile"
+                    type="tel"
+                    placeholder="GSM"
+                  />
+                  <i class="fa fa-mobile"></i>
+                  <div class="error"></div>
+                </div>
+
+                <label>Adresse *</label>
+                <div class="inputIcon">
+                  <input
+                    id="address"
+                    name="address"
+                    type="text"
+                    placeholder="Adresse"
+                  />
+                  <i class="map fa fa-map-marker"></i>
+                  <div class="error"></div>
+                </div>
+
+                <label>Ville *</label>
+                <div class="inputIcon">
+                  <input
+                    id="country"
+                    name="country"
+                    type="text"
+                    placeholder="Ville"
+                  />
+                  <i class="fa fa-building"></i>
+                  <div class="error"></div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn">Enregistrer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Start Presentation ======= -->
+    <section class="presentation py-5" id="presentation">
+      <div class="container">
+        <h2 class="main-heading">Notre Ecole</h2>
+        <div class="bloc-pres">
+          <div class="image">
+            <img
+              src="imgs/presentation.jpg"
+              alt="presentation"
+              class="img-fluid"
+            />
+          </div>
+          <div class="text py-1">
+            <p>
+              L'école de Carthage est une école primaire privée tunisienne
+              rattachée au Ministère de l'Education Tunisien qui se conforme au
+              programme officiel tunisien.
+            </p>
+            <p>
+              L'apprentissage à l'école de Carthage se fait dans une ambiance
+              familiale et respect mutuel entre élèves, enseignants et direction
+              de l'école.
+            </p>
+            <p>
+              Dans notre école, nous offrons un enseignement dans le respect des
+              programmes officiels de l'éducation et nous offrons aussi une
+              éducation plurilingue où l'anglais et le français sont enseignés
+              dès la grande section (5 ans) avec l'informatique.
+            </p>
+            <p>
+              L'école de Carthage, en plus de sa mission éducative éduque ses
+              élèves aux valeurs de la vie tel que la solidarité, le travail en
+              équipe, le respect mutuel, la responsabilité…
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Start Services ======= -->
+    <section class="services py-5" id="services">
+      <div class="container">
+        <h2 class="main-heading">Nos Services</h2>
+        <div class="row text-center">
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
+            <div class="card box box-cantine">
+              <div class="h1 mt-5">
+                <i class="fa fa-utensils"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Cantine</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
+            <div class="card box box-infirmerie">
+              <div class="h1 mt-5">
+                <i class="fa fa-briefcase-medical"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Infirmerie</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
+            <div class="card box box-clubs">
+              <div class="h1 mt-5">
+                <i class="fa fa-laptop-code"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Clubs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
+            <div class="card box box-bus">
+              <div class="h1 mt-5">
+                <i class="fas fa-bus-alt"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Bus</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Start Gallery ======= -->
+    <section class="gallery py-5">
+      <div class="container">
+        <h2 class="main-heading">Gallerie</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-4">
+              <img
+                src="imgs/gallery-1.jpg"
+                onclick="openModal();currentSlide(1)"
+                alt="gallery-1"
+                class="img-fluid image-1 rounded"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-4">
+              <img
+                src="imgs/gallery-2.jpg"
+                onclick="openModal();currentSlide(2)"
+                alt="gallery-2"
+                class="img-fluid image-2 rounded"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-4">
+              <img
+                src="imgs/gallery-3.jpg"
+                onclick="openModal();currentSlide(3)"
+                alt="gallery-3"
+                class="img-fluid image-3 rounded"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-4">
+              <img
+                src="imgs/gallery-4.jpg"
+                onclick="openModal();currentSlide(4)"
+                alt="gallery-4"
+                class="img-fluid image-4 rounded"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-4">
+              <img
+                src="imgs/gallery-5.jpg"
+                onclick="openModal();currentSlide(5)"
+                alt="gallery-5"
+                class="img-fluid image-5 rounded"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-4">
+              <img
+                src="imgs/gallery-6.jpg"
+                onclick="openModal();currentSlide(6)"
+                alt="gallery-6"
+                class="img-fluid image-6 rounded"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-4">
+              <img
+                src="imgs/gallery-7.jpg"
+                onclick="openModal();currentSlide(7)"
+                alt="gallery-7"
+                class="img-fluid image-7 rounded"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-4">
+              <img
+                src="imgs/gallery-8.jpg"
+                onclick="openModal();currentSlide(8)"
+                alt="gallery-8"
+                class="img-fluid image-8 rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Start Parcours Scolaire ======= -->
+    <section class="parcours py-5" id="parcours">
+      <div class="container">
+        <h2 class="main-heading">Parcours Scolaire</h2>
+        <div class="timeline-content">
+          <div class="classes">
+            3 ans <br />
+            + <br />
+            4 ans
+          </div>
+          <div class="parcours-box left">
+            <div class="content">
+              <h5>Classes Maternelles</h5>
+              <p>
+                L'objectif de ces classes sera de développer la créativité et
+                l'autonomie de l'enfant et encourager son développement affectif
+                et social.
+              </p>
+              <p>
+                Chaque classe de maternelle est encadré par un professeur des
+                écoles. Il est accompagné par une aide maternelle qui apporte
+                une assistance technique et éducative et notamment veille aux
+                soins corporels et à l'hygiène des enfants.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="classes">5 ans</div>
+          <div class="parcours-box right">
+            <div class="content">
+              <h5>Classes Préparatoires</h5>
+              <p>
+                La classe préparatoire appartient à la fois au cycle enfantine
+                et au cycle primaire durant la deuxième partie de l'année.
+              </p>
+              <p>
+                Elle prépare à l'entrée à l'école primaire, tout en gardant les
+                privilèges de la maternelle dans la souplesse du programme et du
+                rythme scolaire de la journée.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="classes">
+            6 ans <br />
+            => <br />
+            12 ans
+          </div>
+          <div class="parcours-box left">
+            <div class="content">
+              <h5>Classes Primaires</h5>
+              <p>
+                Ces classes visent à développer le savoir-étudier, à faire
+                apprendre des bases de la langue parlée et écrite ainsi qu'à
+                lire et à écrire aux élèves.
+              </p>
+              <p>
+                De même, il a pour but de développer les capacités
+                intellectuelles des enfants et d'assister à l'acquisition des
+                connaissances dans les sciences naturelles et humanitaires, au
+                développement des capacités physiques, de la motricité, ainsi
+                qu'à la formation du sens des responsabilités civiles et
+                sociales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Start Statics ======= -->
+    <div class="stats">
+      <div class="container">
+        <div class="box">
+          <i class="fa fa-book"></i>
+          <span class="number" data-goal="80">0</span>
+          <span class="text">Matières</span>
+        </div>
+        <div class="box">
+          <i class="fa fa-user-graduate"></i>
+          <span class="number" data-goal="120">0</span>
+          <span class="text">Elèves</span>
+        </div>
+        <div class="box">
+          <i class="fa fa-laptop-code"></i>
+          <span class="number" data-goal="8">0</span>
+          <span class="text">Clubs</span>
+        </div>
+        <div class="box">
+          <i class="fa fa-users"></i>
+          <span class="number" data-goal="50">0</span>
+          <span class="text">Enseignants</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Start Activity Section ======= -->
+    <section class="activity py-5" id="activity">
+      <div class="container">
+        <h2 class="main-heading">Nos Activités</h2>
+        <div class="row text-center">
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <div class="card box-informatique rounded orange-box">
+              <div class="h1 mt-5">
+                <i class="fa fa-laptop-code"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Informatique</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <div class="card box-lecture rounded green-box">
+              <div class="h1 mt-5">
+                <i class="fa fa-book"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Lecture</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <div class="card box-musique rounded pink-box">
+              <div class="h1 mt-5">
+                <i class="fa fa-guitar"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Musique</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <div class="card box-theatre rounded yellow-box">
+              <div class="h1 mt-5">
+                <i class="fa fa-mask"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Theatre</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <div class="card box-danse rounded pink-box">
+              <div class="h1 mt-5">
+                <i class="fa fa-child"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Danse</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <div class="card box-robotique rounded yellow-box">
+              <div class="h1 mt-5">
+                <i class="fa fa-robot"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Robotique</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <div class="card box-calcul rounded orange-box">
+              <div class="h1 mt-5">
+                <i class="fa fa-divide"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Calcul Mental</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <div class="card box-anglais rounded green-box">
+              <div class="h1 mt-5">
+                <i class="fa fa-globe"></i>
+              </div>
+              <div class="card-body mb-5 text-center">
+                <p class="card-title fw-bold">Anglais</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Start Contact ======= -->
+    <div class="contact py-5" id="contact">
+      <div class="container">
+        <h2 class="main-heading">Contact</h2>
+        <div class="content">
+          <form action="">
+            <input
+              class="main-input"
+              type="text"
+              name="name"
+              placeholder="Nom"
+            />
+            <input
+              class="main-input"
+              type="email"
+              name="mail"
+              placeholder="Email"
+            />
+            <input
+              class="main-input"
+              type="tel"
+              name="tel"
+              placeholder="Téléphone"
+            />
+            <textarea
+              class="main-input"
+              name="message"
+              placeholder="Message"
+            ></textarea>
+            <input type="submit" value="Envoyer" />
+          </form>
+          <div class="info">
+            <h4 class="mt-4">Telephone :</h4>
+            <span class="phone">(+216) 50 000 000</span>
+            <span class="phone mb-4">(+216) 70 000 000</span>
+            <h4>Adresse :</h4>
+            <p class="mb-4">Tunis, Tunisie</p>
+            <h4>Email :</h4>
+            <p class="mb-4">carthageschool@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Start Footer ======= -->
+    <div class="footer">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12 school">
+            <h3 class="box-school p-3 text-light fw-bold">Carthage School</h3>
+            <p class="py-2 fw-bold">Informations de l'école</p>
+            <div class="line">
+              <i class="icon fas fa-map-marker-alt fa-fw"></i>
+              <div class="info">Tunis, Tunisie</div>
+            </div>
+            <div class="line">
+              <i class="icon fas fa-clock fa-fw"></i>
+              <div class="info">
+                <span>Lundi - Vendredi : 08h00 à 18h00</span>
+                <span>Samedi : 08h00 à 12h00</span>
+              </div>
+            </div>
+            <ul class="social" style="list-style-type: none">
+              <li>
+                <a href="#" class="facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="youtube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="linkedin">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-sm-12 contact">
+            <h3 class="box-contact p-3 text-light fw-bold">Contact</h3>
+            <p class="py-2 fw-bold">
+              Pour plus d'information vous pouvez nous contacter par mail ou par
+              téléphone
+            </p>
+            <div class="line">
+              <i class="icon fas fa-phone-volume fa-fw"></i>
+              <div class="info">
+                <span>(+216) 50 000 000</span>
+                <span>(+216) 70 000 000</span>
+              </div>
+            </div>
+            <div class="line">
+              <i class="icon fas fa-envelope"></i>
+              <div class="info">carthageschool@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright m-0">
+        <p>Malek Kouki</p>
+        <p>&copy; 2025 All Rights Reserved</p>
+      </div>
+    </div>
+
+    <!-- Bouton scroll-to-top -->
+    <button id="scrollTopBtn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
